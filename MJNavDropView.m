@@ -13,8 +13,6 @@
 
 @interface MJNavDropView ()
 
-@property (nonatomic, strong) id container;     // UIViewController or UIView
-
 @end
 
 @implementation MJNavDropView
@@ -23,6 +21,15 @@
     BOOL    isAnimating;
     BOOL    isDimBackground;
     BOOL    isBorderShadow;
+}
+
+- (id)init {
+    self = [super init];
+    if (self) {
+        // Initialization code
+        [self initialize];
+    }
+    return self;
 }
 
 - (id)initWithContainer:(id)container {
@@ -52,11 +59,15 @@
 - (void)prepareForContainer {
     UIView *view = [self containerView];
     
-    view.frame = [self hideFrame];
-    
-    [self addSubview:view];
+    if (view) {
+        view.frame = [self hideFrame];
+        
+        [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+        [self addSubview:view];
+    }
 }
 
+#pragma mark
 - (UIView *)containerView {
     if (!self.container) {
         return nil;
@@ -108,6 +119,12 @@
 }
 
 #pragma mark - Public
+- (void)setContainer:(id)container {
+    _container = container;
+    
+    [self prepareForContainer];
+}
+
 - (void)setIsDimBackground:(BOOL)hasDimBackground {
     isDimBackground = hasDimBackground;
 }

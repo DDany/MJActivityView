@@ -7,7 +7,6 @@
 //
 
 #import "UIView+Shadow.h"
-#import "UIBezierPath+ShadowPath.h"
 
 
 @implementation UIView (Shadow)
