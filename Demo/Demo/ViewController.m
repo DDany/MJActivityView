@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "MJNavDropView.h"
+#import "MJActivityView.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface ViewController ()
@@ -29,6 +29,7 @@
 @property (weak, nonatomic) IBOutlet UISwitch *dimBackground;
 @property (weak, nonatomic) IBOutlet UISwitch *layerShadow;
 
+@property (weak, nonatomic) IBOutlet UISegmentedControl *typeSegmented;
 @end
 
 @implementation ViewController
@@ -36,7 +37,7 @@
     UIView              *container_view;
     UIViewController    *container_viewController;
     
-    MJNavDropView       *dropView;
+    MJActivityView       *dropView;
 }
 
 #pragma mark 
@@ -68,13 +69,13 @@
 
 #pragma mark - IBAction
 - (IBAction)showUIViewController:(id)sender {
-    MJNavDropView *drop = [self dropView];
+    MJActivityView *drop = [self dropView];
     drop.container = [self container_viewController];
     [drop show];
 }
 
 - (IBAction)showUIView:(id)sender {
-    MJNavDropView *drop = [self dropView];
+    MJActivityView *drop = [self dropView];
     drop.container = [self container_view];
     [drop show];
 }
@@ -109,16 +110,21 @@
     return container_view;
 }
 
-- (MJNavDropView *)dropView {
+- (MJActivityView *)dropView {
     if (!dropView) {
-        dropView = [[MJNavDropView alloc] init];
+        dropView = [[MJActivityView alloc] init];
         [self.view addSubview:dropView];
     }
     
+    [dropView setType:self.typeSegmented.selectedSegmentIndex];
     [dropView setIsDimBackground:self.dimBackground.on];
     [dropView setIsBorderShadow:self.layerShadow.on];
     
     return dropView;
 }
 
+- (void)viewDidUnload {
+    [self setTypeSegmented:nil];
+    [super viewDidUnload];
+}
 @end

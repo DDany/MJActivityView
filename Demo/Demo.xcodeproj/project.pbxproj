@@ -19,8 +19,7 @@
 		425A2E5E16DF65B90040D0E8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 425A2E5D16DF65B90040D0E8 /* ViewController.m */; };
 		425A2E6116DF65B90040D0E8 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 425A2E5F16DF65B90040D0E8 /* ViewController.xib */; };
 		42D49CA216E0555400A41D34 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D49CA116E0555400A41D34 /* QuartzCore.framework */; };
-		42D49CA716E0577700A41D34 /* MJNavDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D49CA416E0577700A41D34 /* MJNavDropView.m */; };
-		42D49CA816E0577700A41D34 /* UIView+Shadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D49CA616E0577700A41D34 /* UIView+Shadow.m */; };
+		42F10B1816FB29E50075E323 /* MJActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F10B1716FB29E50075E323 /* MJActivityView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,10 +40,8 @@
 		425A2E5D16DF65B90040D0E8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		425A2E6016DF65B90040D0E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		42D49CA116E0555400A41D34 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		42D49CA316E0577700A41D34 /* MJNavDropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MJNavDropView.h; path = ../../MJNavDropView.h; sourceTree = "<group>"; };
-		42D49CA416E0577700A41D34 /* MJNavDropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MJNavDropView.m; path = ../../MJNavDropView.m; sourceTree = "<group>"; };
-		42D49CA516E0577700A41D34 /* UIView+Shadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Shadow.h"; path = "../../UIView+Shadow.h"; sourceTree = "<group>"; };
-		42D49CA616E0577700A41D34 /* UIView+Shadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Shadow.m"; path = "../../UIView+Shadow.m"; sourceTree = "<group>"; };
+		42F10B1616FB29E50075E323 /* MJActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MJActivityView.h; path = ../../MJActivityView.h; sourceTree = "<group>"; };
+		42F10B1716FB29E50075E323 /* MJActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MJActivityView.m; path = ../../MJActivityView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,10 +118,8 @@
 		425A2E6716DF65E90040D0E8 /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				42D49CA316E0577700A41D34 /* MJNavDropView.h */,
-				42D49CA416E0577700A41D34 /* MJNavDropView.m */,
-				42D49CA516E0577700A41D34 /* UIView+Shadow.h */,
-				42D49CA616E0577700A41D34 /* UIView+Shadow.m */,
+				42F10B1616FB29E50075E323 /* MJActivityView.h */,
+				42F10B1716FB29E50075E323 /* MJActivityView.m */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -198,8 +193,7 @@
 				425A2E5116DF65B90040D0E8 /* main.m in Sources */,
 				425A2E5516DF65B90040D0E8 /* AppDelegate.m in Sources */,
 				425A2E5E16DF65B90040D0E8 /* ViewController.m in Sources */,
-				42D49CA716E0577700A41D34 /* MJNavDropView.m in Sources */,
-				42D49CA816E0577700A41D34 /* UIView+Shadow.m in Sources */,
+				42F10B1816FB29E50075E323 /* MJActivityView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
