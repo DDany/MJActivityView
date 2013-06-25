@@ -60,6 +60,9 @@
     self.backgroundColor = [UIColor clearColor];
     self.layer.masksToBounds = YES;
     
+    isDimBackground = NO;
+    isBorderShadow = YES;
+    
     [self prepareForContainer];
 }
 
