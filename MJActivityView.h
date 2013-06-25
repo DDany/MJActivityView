@@ -45,6 +45,8 @@ typedef enum {
 // current state
 - (BOOL)isShowing;
 
+- (BOOL)isAnimating;
+
 ////////////////////////////////////////////////////////
 // show animated
 - (void)show;

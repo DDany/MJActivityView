@@ -252,6 +252,10 @@
     return isShowing;
 }
 
+- (BOOL)isAnimating {
+    return isAnimating;
+}
+
 #pragma mark
 - (void)show {
     UIView *view = [self containerView];
